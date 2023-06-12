@@ -18,8 +18,11 @@ BUILD JAR AND RUN TESTS:\
 mvn clean install
 
 RUN APPLICATION:\
-java -jar dronedispatcher-0.0.1-SNAPSHOT.jar
+java -jar dronedispatcher-0.0.1-SNAPSHOT.jar\
 
+==============================================\
+Audit logs will be found in logs/audit-battery.log for current audit logs and historical logs will be stored in /archived/ folder. The scheduled time is 5 Minutes thus it will Audit battery logs every 5 minutes\
+=================================================\
 Assumption 1:\
 All the medication items are listed in src/main/resources/data.sql path and will get loaded into the database, No api created for medication apart from listAllMedication.You can list the medication using below request\
    curl --location --request GET 'localhost:8080/medication/list'
